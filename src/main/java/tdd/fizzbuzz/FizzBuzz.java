@@ -10,6 +10,7 @@ public class FizzBuzz {
     public static final int MODULO_7 = 7;
     public static final String WHIZZ = "Whizz";
     public static final String FIZZ_BUZZ = "FizzBuzz";
+    public static final String BUZZ_WHIZZ = "BuzzWhizz";
 
     public String countOff(int orderNumber) {
         if (orderNumber % MODULO_3 == 0 && orderNumber % MODULO_5 == 0) {
@@ -17,7 +18,7 @@ public class FizzBuzz {
         } else if (orderNumber % MODULO_3 == 0 && orderNumber % MODULO_7 == 0) {
             return FIZZ_WHIZZ;
         } else if (orderNumber % MODULO_5 == 0 && orderNumber % MODULO_7 == 0) {
-            return "BuzzWhizz";
+            return BUZZ_WHIZZ;
         } else if (orderNumber % MODULO_3 == 0) {
             return FIZZ;
         } else if (orderNumber % MODULO_5 == 0) {
