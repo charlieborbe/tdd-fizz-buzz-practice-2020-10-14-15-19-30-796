@@ -12,6 +12,8 @@ public class FizzBuzz {
             return FIZZ;
         } else if (orderNumber % MODULO_5 == 0) {
             return BUZZ;
+        } else if (orderNumber % 7 == 0) {
+            return "Whizz";
         }
         return String.valueOf(orderNumber);
     }
