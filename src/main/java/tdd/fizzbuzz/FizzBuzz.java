@@ -15,25 +15,19 @@ public class FizzBuzz {
 
     public String countOff(int orderNumber) {
         StringBuilder outputResult = new StringBuilder();
-        if (orderNumber % MODULO_3 == 0 && orderNumber % MODULO_5 == 0 && orderNumber % MODULO_7 == 0) {
-            return FIZZ_BUZZ_WHIZZ;
-        } else if (orderNumber % MODULO_3 == 0 && orderNumber % MODULO_5 == 0) {
-            return FIZZ_BUZZ;
-        } else if (orderNumber % MODULO_3 == 0 && orderNumber % MODULO_7 == 0) {
-            return FIZZ_WHIZZ;
-        } else if (orderNumber % MODULO_5 == 0 && orderNumber % MODULO_7 == 0) {
-            return BUZZ_WHIZZ;
-        } else if (orderNumber % MODULO_3 == 0) {
-            return FIZZ;
-        } else if (orderNumber % MODULO_5 == 0) {
-            return BUZZ;
-        } else if (orderNumber % MODULO_7 == 0) {
-            return WHIZZ;
+        if (isDivisibleBy(orderNumber, MODULO_3)) {
+            outputResult.append(FIZZ);
         }
-        return String.valueOf(orderNumber);
+        if (isDivisibleBy(orderNumber, MODULO_5)) {
+            outputResult.append(BUZZ);
+        }
+        if (isDivisibleBy(orderNumber, MODULO_7)) {
+            outputResult.append(WHIZZ);
+        }
+        return outputResult.length() == 0 ? String.valueOf(orderNumber) : outputResult.toString();
     }
 
-    public Boolean isDivisibleBy(int orderNumber, int modulo){
+    public Boolean isDivisibleBy(int orderNumber, int modulo) {
         return orderNumber % modulo == 0;
     }
 }
