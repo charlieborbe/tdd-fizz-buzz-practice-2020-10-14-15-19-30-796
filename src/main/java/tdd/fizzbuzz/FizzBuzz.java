@@ -14,6 +14,7 @@ public class FizzBuzz {
     public static final String FIZZ_BUZZ_WHIZZ = "FizzBuzzWhizz";
 
     public String countOff(int orderNumber) {
+        StringBuilder outputResult = new StringBuilder();
         if (orderNumber % MODULO_3 == 0 && orderNumber % MODULO_5 == 0 && orderNumber % MODULO_7 == 0) {
             return FIZZ_BUZZ_WHIZZ;
         } else if (orderNumber % MODULO_3 == 0 && orderNumber % MODULO_5 == 0) {
@@ -30,5 +31,9 @@ public class FizzBuzz {
             return WHIZZ;
         }
         return String.valueOf(orderNumber);
+    }
+
+    public Boolean isDivisibleBy(int orderNumber, int modulo){
+        return orderNumber % modulo == 0;
     }
 }
