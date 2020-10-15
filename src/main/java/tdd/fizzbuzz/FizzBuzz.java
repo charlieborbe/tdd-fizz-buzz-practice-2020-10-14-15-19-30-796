@@ -2,16 +2,12 @@ package tdd.fizzbuzz;
 
 public class FizzBuzz {
 
-    public static final String FIZZ_WHIZZ = "FizzWhizz";
+    private static final String FIZZ = "Fizz";
+    private static final String BUZZ = "Buzz";
+    private static final String WHIZZ = "Whizz";
     private static final int MODULO_3 = 3;
-    public static final String FIZZ = "Fizz";
-    public static final int MODULO_5 = 5;
-    public static final String BUZZ = "Buzz";
-    public static final int MODULO_7 = 7;
-    public static final String WHIZZ = "Whizz";
-    public static final String FIZZ_BUZZ = "FizzBuzz";
-    public static final String BUZZ_WHIZZ = "BuzzWhizz";
-    public static final String FIZZ_BUZZ_WHIZZ = "FizzBuzzWhizz";
+    private static final int MODULO_5 = 5;
+    private static final int MODULO_7 = 7;
 
     public String countOff(int orderNumber) {
         StringBuilder outputResult = new StringBuilder();
@@ -27,7 +23,7 @@ public class FizzBuzz {
         return outputResult.length() == 0 ? String.valueOf(orderNumber) : outputResult.toString();
     }
 
-    public Boolean isDivisibleBy(int orderNumber, int modulo) {
+    private Boolean isDivisibleBy(int orderNumber, int modulo) {
         return orderNumber % modulo == 0;
     }
 }
